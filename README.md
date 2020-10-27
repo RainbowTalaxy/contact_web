@@ -8,8 +8,8 @@
 
 下载并改变当前路径：
 ```
-git clone 
-cd /
+git clone https://github.com/RainbowTalaxy/contact_web
+cd /contact_web
 ```
 
 在MySQL命令行界面中：
