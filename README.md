@@ -6,7 +6,7 @@
 
 确保安装了`npm`和`mysql`
 
-下载并改变当前路径：
+下载服务器文件并改变当前路径：
 ```
 git clone https://github.com/RainbowTalaxy/contact_web
 cd /contact_web
@@ -14,7 +14,7 @@ cd /contact_web
 
 在MySQL命令行界面中：
 ```
-source /src/sql.js
+source db.sql
 ```
 
 运行服务器：
