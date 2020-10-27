@@ -21,3 +21,5 @@ source db.sql
 ```
 node app.js
 ```
+
+在浏览器中访问你服务器的`8077`端口
