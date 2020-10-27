@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>通讯录</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src='script.js' defer></script>
+    </head>
+    <body>
+        <div id="app">
+            <table>
+                <tr>
+                    <th>姓名</th>
+                    <th>电话</th>
+                    <th>住址</th>
+                </tr>
+                <tr v-for="info in list">
+                    <td><input type="text" v-model=info.i_name :disabled=info.disabled></td>
+                    <td><input type="text" v-model=info.i_tele :disabled=info.disabled></td>
+                    <td><input type="text" v-model=info.i_addr :disabled=info.disabled></td>
+                    <td v-if=info.disabled><button v-on:click=onEdit(info)>修改</button></td>
+                    <td v-if=info.disabled><button v-on:click=onDelete(info)>删除</button></td>
+                    <td v-if=!info.disabled><button v-on:click=onCancel(info)>取消</button></td>
+                    <td v-if=!info.disabled><button v-on:click=onSave(info)>保存</button></td>
+                </tr>
+            </table>
+            <input type="text" v-model=form.name>
+            <input type="text" v-model=form.tele>
+            <input type="text" v-model=form.addr>
+            <button v-on:click=onAdd()>添加联系人</button>
+        </div>
+    </body>
+</html>
